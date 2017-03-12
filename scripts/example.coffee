@@ -27,6 +27,12 @@ module.exports = (robot) ->
   
   robot.respond /lulz/i, (res) ->
     res.send res.random lulz
+
+  robot.respond /are you up/i, (res) ->
+    res.reply "For you sir, always."
+
+  robot.respond /good (.*)/i, (res) ->
+    res.reply "Good #{res.match[1]} sir, welcome back."
   #
   # robot.topic (res) ->
   #   res.send "#{res.message.text}? That's a Paddlin'"
